@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="row">
+<div class="row text-white">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Role Management</h2>
@@ -18,14 +18,14 @@
     </div>
 @endif
 <table class="table table-bordered">
-    <tr>
+    <tr class="text-white">
         <th>No</th>
         <th>Name</th>
         <th width="280px">Action</th>
     </tr>
     
     @foreach ($roles as $key => $role)
-    <tr>
+    <tr class="text-white">
         <td>{{ ++$i }}</td>
         <td>{{ $role->name }}</td>
         <td>
@@ -43,5 +43,4 @@
     @endforeach
 </table>
 {!! $roles->render() !!}
-<p class="text-center text-primary"><small>Tutorial by LaravelTuts.com</small></p>
 @endsection

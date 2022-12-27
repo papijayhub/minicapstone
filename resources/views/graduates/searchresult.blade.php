@@ -1,7 +1,7 @@
 @extends('layouts.app')
       
 @section('content')
-<h2>Search Results</h2><br>
+<h2 class="text-white">Search Results</h2><br>
     @if(count($graduates) > 0)
             {{-- <a href="{{ url('member/'.$graduate->id) }}"> --}}
                 {{-- {{ $graduate->name }} {{ $graduate->qoute }} --}}

@@ -16,7 +16,7 @@
 </div>
 @endif
 <table class="table table-bordered">
-    <tr>
+    <tr class="text-white">
         <th>No</th>
         <th>Name</th>
         <th>Email</th>
@@ -24,14 +24,14 @@
         <th width="280px">Action</th>
     </tr>
 @foreach ($data as $key => $user)
-    <tr>
+    <tr class="text-white">
         <td>{{ ++$i }}</td>
         <td>{{ $user->name }}</td>
         <td>{{ $user->email }}</td>
         <td>
             @if(!empty($user->getRoleNames()))
                 @foreach($user->getRoleNames() as $v)
-                    <span class="badge rounded-pill bg-dark">{{ $v }}</span>
+                    <span class="badge rounded-pill bg-primary">{{ $v }}</span>
                 @endforeach
             @endif
         </td>
@@ -46,5 +46,4 @@
 @endforeach
 </table>
 {!! $data->render() !!}
-<p class="text-center text-primary"><small>Tutorial by LaravelTuts.com</small></p>
 @endsection

@@ -34,18 +34,19 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Graduates</h2>
+                <h2 class="text-white">Graduates</h2>
             </div>
             <div class="pull-right">
                 @can('graduate-create')
                 <a class="btn btn-success" href="{{ route('graduates.create') }}"> Add New Graduates</a>
                 @endcan
             </div>
+            <br>
             {{-- s --}}
             <div class="search"> <i class="fa fa-search"></i> 
               <form class="navbar-form navbar-left" action="{{ URL::to('find') }}" method="POST">
                   {{ csrf_field() }}
-                      <input type="text" id="search" name="search" class="form-control" placeholder="Search Member" autocomplete="off">
+                      <input type="text" id="search" name="search" class="form-control" placeholder="Search" autocomplete="off">
                       <button type="submit" class="btn btn-primary">Search</button> 
               </form>
               </div>

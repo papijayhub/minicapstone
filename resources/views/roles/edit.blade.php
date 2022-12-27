@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="row">
+<div class="row text-white">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
             <h2>Edit Role</h2>
@@ -8,6 +8,7 @@
         <div class="pull-right">
             <a class="btn btn-primary" href="{{ route('roles.index') }}"> Back</a>
         </div>
+        <br>
     </div>
 </div>
 @if (count($errors) > 0)
@@ -21,7 +22,7 @@
     </div>
 @endif
 {!! Form::model($role, ['method' => 'PATCH','route' => ['roles.update', $role->id]]) !!}
-<div class="row">
+<div class="row text-white">
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
             <strong>Name:</strong>
@@ -45,4 +46,3 @@
 </div>
 {!! Form::close() !!}
 @endsection
-<p class="text-center text-primary"><small>Tutorial by LaravelTuts.com</small></p>
